@@ -4,8 +4,12 @@ import shutil
 import csv
 import datetime
 
+
 source_folder = './dairies'
 destination_folder = './image_dataset'
+if not os.path.exists(destination_folder):
+    os.makedirs('image_dataset')
+
 file_names = []
 # Create the csv file that will hold images metadata
 with open('Report.csv', mode='w', newline='') as file:
